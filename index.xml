@@ -2,21 +2,21 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>godvvvvvv的博客</title>
-    <link>http://example.org/</link>
+    <link>http://godvvvvvv.github.io/</link>
     <description>Recent content on godvvvvvv的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
     <lastBuildDate>Fri, 28 Aug 2020 20:30:13 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://godvvvvvv.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>开博大吉</title>
-      <link>http://example.org/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
+      <link>http://godvvvvvv.github.io/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</link>
       <pubDate>Fri, 28 Aug 2020 20:30:13 +0800</pubDate>
       
-      <guid>http://example.org/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
+      <guid>http://godvvvvvv.github.io/posts/%E5%BC%80%E5%8D%9A%E5%A4%A7%E5%90%89/</guid>
       <description>大家好 我的博客开通了，以后会认真学习，养成写博客的好习惯。</description>
     </item>
     
