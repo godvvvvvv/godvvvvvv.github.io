@@ -6,10 +6,23 @@
     <description>Recent content in Posts on godvvvvvv的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sat, 29 Aug 2020 22:40:48 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 30 Aug 2020 21:20:13 +0800</lastBuildDate>
     
 	<atom:link href="godvvvvvv.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>如何用hugo搭建个人博客</title>
+      <link>godvvvvvv.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</link>
+      <pubDate>Sun, 30 Aug 2020 21:20:13 +0800</pubDate>
+      
+      <guid>godvvvvvv.github.io/posts/%E5%A6%82%E4%BD%95%E7%94%A8hugo%E6%90%AD%E5%BB%BA%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2/</guid>
+      <description>一.首先你应该下载一个hugo 从网上下载一个hugo，注意你的电脑系统的区别。
+当然下载完后并没有结束，而是要解压你的hugo到一个目录
+解压完成后我们需要把hugo得目录添加到环境变量中，你可以通过两种方法添加
+ 我的电脑-属性-高级系统设置-环境变量-将你的hugo所在的路径添加到path中。 在命令行中运行，vi ~/.bashrc，export PATH=$PATH:/d/software/hugo，然后保存并退出（ESC：wq）。 在完成添加环境变量之后在你的命令行中运行hugo version来查看是否配置完成。  二.现在就可以用hugo快速搭建自己的博客啦  在一个目录中利用hugo new site quickstart来创建一个根目录，quuckstart最好换成你想要的目录名字。 运行cd quickstart, git init来进入目录并创建本地仓库，运行git submodule add https://github.com/budparr/gohugo-theme-ananke.git themes/ananke来下载一个博客得默认主题，完成后找到config.toml文件修改博客名字等信息。 现在来写第一篇文章，运行hugo new posts/my-first-post.md来创建一个markdown文件，相信你可以很好的完成文章的内容，写完记得将状态改为false。 来运行hugo serve -D来生成你的博客，此时点击http://localhost:1313/即可查看本地博客的生成页面。  这样你就生成你的博客（仅仅能在本地查看）
+关于如何推动github中就在下一次博客再讲吧！ </description>
+    </item>
     
     <item>
       <title>New_file</title>
