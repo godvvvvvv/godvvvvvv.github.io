@@ -6,10 +6,19 @@
     <description>Recent content on godvvvvvv的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Sun, 30 Aug 2020 21:20:13 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 02 Sep 2020 15:20:23 +0800</lastBuildDate>
     
 	<atom:link href="godvvvvvv.github.io/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Maven的包管理</title>
+      <link>godvvvvvv.github.io/posts/maven%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86/</link>
+      <pubDate>Wed, 02 Sep 2020 15:20:23 +0800</pubDate>
+      
+      <guid>godvvvvvv.github.io/posts/maven%E7%9A%84%E5%8C%85%E7%AE%A1%E7%90%86/</guid>
+      <description>一.什么是包，类是从哪里找到的  要说包，首先要说到jvm的工作原理啊，jvm的工作原理就是去执行一个类的字节码，如果在执行这个类的过程中碰到新的类，那就加载它。 那么去哪里加载这个碰到的类呢？答案就是类路径（classpath）中挨个去查找相应的类，找到了则加载，找不到则报错。 那么什么是包呢，其实就是把许多类打包到一起的一个“压缩包“。 但是事情没有这么简单，你在运行你的类的时候碰到了一个新的类，难道只需要加载这个嘛？答案当然是否定的，在加载新的类的时候，新的类又引入了其他的类，则又要去加载 另一个新的类，这就是所谓的”传递性依赖“。 还记得类的唯一标识是他的全限定类名，但是当传递性依赖引入了两个同名(不同版本的，功能上存在差异的)的包，那么问题就来了。  二.Maven的包管理 Maven可以帮你快速的自动下载你所需要的包  包管理的本质就是告诉jvm去哪里找到所需要的第三方类库，以及成功的解决其中的”包冲突“。 在maven的中央仓库中存放了所需要的所有的第三方类库，在我们需要引入第三方类库的时候，maven就可以快速的缓存来供我们使用。 在pom.xml文件中的dependency标签下存放了我们所需要的引入的第三方类库，他一共有三个必须的标签，分别是groupId/artifactId/version，三者共同决定了你所需要的包位于 maven中央仓库的位置，有的还有scope这样一个标签，来表示这个依赖所作用的范围，其中比较常见的compile作用于全局，test作用于测试代码中。这样可以达到快速检索并找到所需要包的效果，大大的提升了效率。  Maven可以帮助你解决包冲突  包冲突来自于传递性依赖，因为依赖的存在，导致引入了同名的包。 Maven的原则是在classpath中绝对不允许出现同名不同版本的jar包，如果你不小心引入了，那么根据这个原则Maven会自动地帮你解决掉一部分，直到只剩下一个！Maven解决掉多余的包的原则是 根据dependencytree谁离根节点约近谁就胜出，胜出者就可以留下。 但是我们不一定希望近的胜出，因为近的那个包的版本不一定是最新的，他不一定支持其他的依赖。  三.解决包冲突的办法 在解决包冲突之前我们需要知道问题出在了哪里  我们可以直接点击idea内置的maven图形界面，点开dependency来查看。 在命令行中输入mvn dependency：tree来查看依赖树。  那么如何解决呢？  直接把最新版本的，也就是你想留下的那个版本的包写入pom.xml文件中，让它位于离根节点最近的一层，那么它就轻易的”胜出啦“。 把你想要的干掉的包在pom.xml文件中e用xclusion标签干掉他。 下载一个maven helper插件，可以直接在插件里面利用插件对你当前依赖分析的结果去一键解决包冲突。  </description>
+    </item>
     
     <item>
       <title>如何用hugo搭建个人博客</title>
