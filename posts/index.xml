@@ -6,10 +6,19 @@
     <description>Recent content in Posts on godvvvvvv的博客</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-Hans</language>
-    <lastBuildDate>Wed, 02 Sep 2020 15:20:23 +0800</lastBuildDate>
+    <lastBuildDate>Thu, 03 Sep 2020 21:41:42 +0800</lastBuildDate>
     
 	<atom:link href="godvvvvvv.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>关于Collection体系的一点总结</title>
+      <link>godvvvvvv.github.io/posts/%E5%85%B3%E4%BA%8Ecollection%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%BB%E7%BB%93%C3%A3/</link>
+      <pubDate>Thu, 03 Sep 2020 21:41:42 +0800</pubDate>
+      
+      <guid>godvvvvvv.github.io/posts/%E5%85%B3%E4%BA%8Ecollection%E4%BD%93%E7%B3%BB%E7%9A%84%E4%B8%80%E7%82%B9%E6%80%BB%E7%BB%93%C3%A3/</guid>
+      <description>关于Collection体系做一点点总金额，可能很乱，但是是自己所能学到的想到的。 大概分为三个部分，list，set，map。 对于list和set而言  list本质上就是一个数组，list和set之间的显而易见的区别在于能否有重复的元素，set是会自动去重的。 要注意的是他们都是接口，千万不可以直接去new一个实例，例如这样 Set&amp;lt;Object&amp;gt; set = new Set&amp;lt;&amp;gt;;这样是不对的！！！ 他们提供了很多方便的方法来供我们使用。   size()用来得到数组长度的函数；isEmpty用来判断数组是否为空；contains()用来判断是否包含某个元素。 add()添加一个元素；addall()把某个list的元素全都添加进来；a.retainAll(b)用来找到ab共有的元素。 clear()删除所有元素；remove()删除某个元素；a.removeAll(b)用来删除a中b的元素。  讲到的可能的面试题  扩容的原理：当一直向一个ArrayList中添加元素事，程序会帮你首先查看是否有足够的内存装得下要添加的元素，如果不够会再重新创建一个新的ArrayList，并 把旧的里面的元素复制进新的里面，新的长度是旧的1.5倍大小。  对于set的一点点总结  对于set对象如何去重，其实就是利用equals方法来判断。 在判断两个对象是否相等之前，会首先判断两个对象的hash是否相等，因为判断hashcode的过程效率更高。两个不同的对象也有可能拥有相同的hashcode，故而 对象相同，hashcode一定相同，hashcode不同那么对象一定不等了。 注意HashSet是无序的，linkedHashSet是根据你输入的顺序排序的。 java世界第二重要的约定：   同⼀个对象必须始终返回相同的hashCode 两个对象的equals返回true，必须返回相同的hashCode 两个对象不等，也可能返回相同的hashCode  关于Map  Map内存放并不仅仅是一个个个体的元素，而是一对一对的映射！(键-&amp;gt;值)注意这里的区别。 同样的Map仅仅只是一个接口，需要实例化的时候，HashMap是一个常用的选择。 提供的方法   put/putAll有点类似于以上的add/addAll get()通过键来查找相应的value containsKey()/containsValue()分别为是否包含相应的键或者值 keyset为把Map对象中的键拿出来放到一个set对象中去；values()来返回所有的值到一个collection中；entryset()来返回Map中的键值对到一个set中  红黑树的被用于jdk7以后解决hash碰撞问题导致的效率大幅下降 另外，HashMap并不是线程安全的，在多线程访问中，可能会造成死循环，以至于cpu100%。 </description>
+    </item>
     
     <item>
       <title>Maven的包管理</title>
